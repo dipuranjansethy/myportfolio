@@ -115,6 +115,7 @@ const ContactButton = styled.input`
   margin-top: 2px;
   border-radius: 12px;
   border: none;
+  cursor:pointer;
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
@@ -130,7 +131,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+    emailjs.sendForm('service_cto83jl', 'template_wp66a9k', form.current, 'SzIgkH3ypvzpZxpib')
       .then((result) => {
         setOpen(true);
         form.current.reset();
@@ -142,7 +143,7 @@ const Contact = () => {
 
 
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
